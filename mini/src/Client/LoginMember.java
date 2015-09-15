@@ -1,3 +1,4 @@
+package Client;
 import java.awt.*;
 import javax.swing.*;
 public class LoginMember extends JFrame{
@@ -6,8 +7,10 @@ public class LoginMember extends JFrame{
 	private JPanel southp = new JPanel();
 	private JPanel maincnp = new JPanel();
 	private JPanel maineast = new JPanel();
+	private JPanel north = new JPanel();
 	private JButton message = new JButton("Message");
 	private JButton bill = new JButton("상품주문");
+	private JButton exbt = new JButton("사용종료");
 	private JLabel user = new JLabel("사용자", JLabel.CENTER);
 	private JLabel time = new JLabel("사용시간", JLabel.CENTER);
 	private JLabel billge = new JLabel("사용요금", JLabel.CENTER);
@@ -15,6 +18,9 @@ public class LoginMember extends JFrame{
 	LoginMember(){
 			con = this.getContentPane();
 			con.setLayout(new BorderLayout());
+			con.add("North", north);
+			north.setLayout(new BorderLayout());
+			north.add("East", exbt);
 			con.add("Center", mainp);
 			con.add("South", southp);
 			mainp.setLayout(new GridLayout(1,2));
